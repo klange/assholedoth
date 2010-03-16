@@ -1,5 +1,5 @@
 %:include "asshole.h"
- 
+
 Object MyObject Begin
     Public
         Method PrintMyValue NoArguments Begin
@@ -13,6 +13,8 @@ Object MyObject Begin
 EndObject
  
 Application Begin
+    RequireVersion (0,1,1);
+    
     MyObject newObject;
     newObject.SetMyValue(5);
     Integer random;

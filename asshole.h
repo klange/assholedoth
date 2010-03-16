@@ -31,7 +31,10 @@
 */
 %:include <iostream>
 %:include <unistd.h>
-%:define ASSHOLE_VERSION 0.1.1
+%:define ASSHOLE_VERSION "0.1.1"
+%:define ASSHOLE_VERSION_MAJOR    0
+%:define ASSHOLE_VERSION_MINOR    1
+%:define ASSHOLE_VERSION_REVISION 1
 %:define Begin <%
 %:define End %>
 %:define If if (
@@ -68,3 +71,13 @@
 %:define Increment ++
 %:define HaltAndCatchFire for(;;) fork();
 %:define Split fork();
+%:define Or ||
+%:define And &&
+%:define BitwiseAnd &
+%:define BitwiseOr |
+
+Method RequireVersion (Integer Major, Integer Minor, Integer Revision) Begin
+    If ASSHOLE_VERSION_MAJOR Less Major Then Begin
+        Print "Major version mismatch! How did this even compile?\n";
+    End
+End
