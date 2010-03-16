@@ -1,5 +1,5 @@
 %:include "asshole.h"
-
+ 
 Object MyObject Begin
     Public
         Method PrintMyValue NoArguments Begin
@@ -11,7 +11,7 @@ Object MyObject Begin
     Private
         Integer myValue;
 EndObject
-
+ 
 Application Begin
     MyObject newObject;
     newObject.SetMyValue(5);
