@@ -46,9 +46,9 @@
 %:define String string
 %:define Character char
 %:define Boolean bool
-%:define Single single
+%:define Single float
 %:define Long long
-%:define Byte byte
+%:define Byte unsigned char
 %:define Void void
 %:define Object class
 %:define EndObject };
